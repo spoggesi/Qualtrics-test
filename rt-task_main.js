@@ -34,9 +34,7 @@ var instructions = {
 timeline.push(instructions);
 
 /* test trials */
-
-/* 
-var test_stimuli = [{
+var test_stimuli1 = [{
         stimulus: repo_site + "img/blue.png", // Change 3: Adding `repo_site` in `test_stimuli`
         data: {
             test_part: 'test',
@@ -51,12 +49,22 @@ var test_stimuli = [{
         }
     }
 ];
-*/
 
 /* define trial stimuli array for timeline variables */
-var test_stimuli = [
-  { stimulus: Energetic,  correct_response: 'j'},
-  { stimulus: Indulgent,  correct_response: 'j'}
+var test_stimuli = [{ 
+    stimulus: Energetic, 
+       data: {
+            test_part: 'test',
+            correct_response: 'j'
+       }
+    },
+{ 
+    stimulus: Indulgent,  
+    data: {
+            test_part: 'test',
+            correct_response: 'j'
+    },
+}
 ];
 
 var fixation = {
@@ -70,39 +78,7 @@ var fixation = {
         test_part: 'fixation'
     }
 }
-var Energetic = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: '<div style="font-size:60px;">Energetic</div>',
-  choices: ['f', 'j'],
-  trial_duration: function(){
-    return jsPsych.randomization.sampleWithoutReplacement([1000], 1)[0];
-},
-  data: {
-    task: 'response',
-    correct_response: jsPsych.timelineVariable('correct_response')
-  },
-  on_finish: function(data){
-    data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
-  }
-};
 
-var Indulgent = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: '<div style="font-size:60px;">Indulgent</div>',
-  choices: ['f', 'j'],
-  trial_duration: function(){
-    return jsPsych.randomization.sampleWithoutReplacement([1000], 1)[0];
-  },
-  data: {
-    task: 'response',
-    correct_response: jsPsych.timelineVariable('correct_response')
-  },
-  on_finish: function(data){
-    data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response);
-  }
-};
-
-/*
 var test = {
     type: "image-keyboard-response",
     stimulus: jsPsych.timelineVariable('stimulus'),
@@ -111,11 +87,10 @@ var test = {
     on_finish: function (data) {
         data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
     },
-} 
-*/
+}
 
 var test_procedure = {
-  timeline: [fixation, Energetic, fixation, Indulgent],
+  timeline: [fixation, test],
   timeline_variables: test_stimuli,
   repetitions: 1,
   randomize_order: true
