@@ -36,14 +36,14 @@ timeline.push(instructions);
 /* test trials */
 
 var test_stimuli = [{
-        stimulus: '<div style="font-size:60px;">+</div>',
+        stimulus: '<div style="font-size:60px;">Energetic</div>',
         data: {
             test_part: 'test',
             correct_response: 'f'
         }
     },
     {
-        stimulus: '<div style="font-size:60px;">+</div>',
+        stimulus: '<div style="font-size:60px;">Indulgent</div>',
         data: {
             test_part: 'test',
             correct_response: 'j'
