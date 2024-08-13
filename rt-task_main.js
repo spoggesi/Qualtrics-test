@@ -34,7 +34,6 @@ var instructions = {
 timeline.push(instructions);
 
 /* test trials */
-
 var test_stimuli = [{
         stimulus: repo_site + "img/blue.png", // Change 3: Adding `repo_site` in `test_stimuli`
         data: {
@@ -48,17 +47,17 @@ var test_stimuli = [{
             test_part: 'test',
             correct_response: 'j'
         }
-    },
-    {
-        type: 'html-keyboard-response',
-        stimulus: '<div style="font-size:60px;">+</div>',
+    },   
+];
+
+/* test word trial */
+var word_stimuli = [{
+        stimulus: "Energetic",
         data: {
-            test_part: 'test',
+            test_part: 'word',
             correct_response: 'j'
         }
     }
-    
-];
 
 var fixation = {
     type: 'html-keyboard-response',
@@ -72,6 +71,16 @@ var fixation = {
     }
 }
 
+var test_word = {
+    type: "html-keyboard-response",
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    choices: ['f', 'j'],
+    data: jsPsych.timelineVariable('data'),
+    on_finish: function (data) {
+        data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
+    },
+}
+
 var test = {
     type: "image-keyboard-response",
     stimulus: jsPsych.timelineVariable('stimulus'),
@@ -83,7 +92,7 @@ var test = {
 }
 
 var test_procedure = {
-    timeline: [fixation, test],
+    timeline: [fixation, test, test_word],
     timeline_variables: test_stimuli,
     repetitions: 1,
     randomize_order: true
@@ -91,7 +100,6 @@ var test_procedure = {
 timeline.push(test_procedure);
 
 /* define debrief */
-
 var debrief_block = {
     type: "html-keyboard-response",
     stimulus: function () {
