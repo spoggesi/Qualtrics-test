@@ -36,14 +36,14 @@ timeline.push(instructions);
 /* test trials */
 
 var test_stimuli = [{
-        stimulus: repo_site + "img/blue.png", // Change 3: Adding `repo_site` in `test_stimuli`
+        stimulus: '<div style="font-size:60px;">+</div>',
         data: {
             test_part: 'test',
             correct_response: 'f'
         }
     },
     {
-        stimulus: repo_site + "img/orange.png", // Change 3: Adding `repo_site` in `test_stimuli`
+        stimulus: '<div style="font-size:60px;">+</div>',
         data: {
             test_part: 'test',
             correct_response: 'j'
@@ -64,7 +64,7 @@ var fixation = {
 }
 
 var test = {
-    type: "image-keyboard-response",
+    type: "html-keyboard-response",
     stimulus: jsPsych.timelineVariable('stimulus'),
     choices: ['f', 'j'],
     data: jsPsych.timelineVariable('data'),
@@ -76,7 +76,7 @@ var test = {
 var test_procedure = {
     timeline: [fixation, test],
     timeline_variables: test_stimuli,
-    repetitions: 5,
+    repetitions: 1,
     randomize_order: true
 }
 timeline.push(test_procedure);
