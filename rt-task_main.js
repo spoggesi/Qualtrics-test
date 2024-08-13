@@ -38,14 +38,14 @@ timeline.push(instructions);
 var test_stimuli = [{
         stimulus: '<div style="font-size:60px;">Energetic</div>',
         data: {
-            test_part: 'test',
-            correct_response: 'f'
+            test_part: 'energetic',
+            correct_response: 'j'
         }
     },
     {
         stimulus: '<div style="font-size:60px;">Indulgent</div>',
         data: {
-            test_part: 'test',
+            test_part: 'indulgent',
             correct_response: 'j'
         }
     }
@@ -87,17 +87,17 @@ var debrief_block = {
     type: "html-keyboard-response",
     stimulus: function () {
 
-        var trials = jsPsych.data.get().filter({
-            test_part: 'test'
+        var energetic = jsPsych.data.get().filter({
+            test_part: 'energetic'
         });
-        var correct_trials = trials.filter({
-            correct: true
+        var indulgent = jsPsych.data.get().filter({
+            test_part: 'indulgent'
         });
-        var accuracy = Math.round(correct_trials.count() / trials.count() * 100);
-        var rt = Math.round(correct_trials.select('rt').mean());
+        var rt_energetic = Math.round(energetic.select('rt').mean());
+        var rt_indulgent = Math.round(indulgent.select('rt').mean());
 
-        return "<p>You responded correctly on " + accuracy + "% of the trials.</p>" +
-            "<p>Your average response time was " + rt + "ms.</p>" +
+        return "<p>energetic " + rt_energetic + "ms.</p>" +
+            "<p>indulgent " + rt_indulgent + "ms.</p>" +
             "<p>Press any key to complete the experiment. Thank you!</p>";
 
     }
