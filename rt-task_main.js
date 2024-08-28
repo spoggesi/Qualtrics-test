@@ -42,6 +42,58 @@ var test_stimuli = [{
     {
         stimulus: '<div style="font-size:60px;">indulgent</div>',
         data: {test_part: 'indulgent', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">nervous</div>',
+        data: {test_part: 'nervous', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">relaxed</div>',
+        data: {test_part: 'relaxed', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">active</div>',
+        data: {test_part: 'active', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">happy</div>',
+        data: {test_part: 'happy', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">uninspired</div>',
+        data: {test_part: 'uninspired', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">classic</div>',
+        data: {test_part: 'classic', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">impressed</div>',
+        data: {test_part: 'impressed', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">sour</div>',
+        data: {test_part: 'sour', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">sweet</div>',
+        data: {test_part: 'sweet', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">thick</div>',
+        data: {test_part: 'thick', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">creamy</div>',
+        data: {test_part: 'creamy', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">healthy</div>',
+        data: {test_part: 'healthy', correct_response: 'j'}
+    },
+    {
+        stimulus: '<div style="font-size:60px;">tasty</div>',
+        data: {test_part: 'tasty', correct_response: 'j'}
     }
 ];
 
@@ -88,10 +140,77 @@ var debrief_block = {
         var indulgent = jsPsych.data.get().filter({
             test_part: 'indulgent'
         });
+        var nervous = jsPsych.data.get().filter({
+            test_part: 'nervous'
+        });
+        var relaxed = jsPsych.data.get().filter({
+            test_part: 'relaxed'
+        });
+        var active = jsPsych.data.get().filter({
+            test_part: 'active'
+        });
+        var happy = jsPsych.data.get().filter({
+            test_part: 'happy'
+        });
+        var uninspired = jsPsych.data.get().filter({
+            test_part: 'uninspired'
+        });
+        var classic = jsPsych.data.get().filter({
+            test_part: 'classic'
+        });
+        var impressed= jsPsych.data.get().filter({
+            test_part: 'impressed'
+        });
+        var sour = jsPsych.data.get().filter({
+            test_part: 'sour'
+        });
+        var sweet = jsPsych.data.get().filter({
+            test_part: 'sweet'
+        });
+        var thick = jsPsych.data.get().filter({
+            test_part: 'thick'
+        });
+        var creamy = jsPsych.data.get().filter({
+            test_part: 'creamy'
+        });
+var healthy = jsPsych.data.get().filter({
+            test_part: 'healthy'
+        });
+var tasty = jsPsych.data.get().filter({
+            test_part: 'tasty'
+        });
+
+
+
         var rt_energetic = Math.round(energetic.select('rt').mean());
         var rt_indulgent = Math.round(indulgent.select('rt').mean());
+        var rt_nervous = Math.round(nervous.select('rt').mean());
+var rt_relaxed = Math.round(relaxed.select('rt').mean());
+var rt_active = Math.round(active.select('rt').mean());
+var rt_happy = Math.round(happy.select('rt').mean());
+var rt_uninspired = Math.round(uninspired.select('rt').mean());
+var rt_classic = Math.round(classic.select('rt').mean());
+var rt_impressed = Math.round(impressed.select('rt').mean());
+var rt_sour= Math.round(indulgent.select('rt').mean());
+var rt_sweet= Math.round(sweet.select('rt').mean());
+var rt_thick= Math.round(thick.select('rt').mean());
+var rt_creamy= Math.round(creamy.select('rt').mean());
+var rt_healthy= Math.round(healthy.select('rt').mean());
+var rt_tasty= Math.round(tasty.select('rt').mean());
 
-        return "<p>energetic " + rt_energetic + "ms.</p>" +
+
+
+
+
+
+
+
+
+
+
+
+
+return "<p>energetic " + rt_energetic + "ms.</p>" +
             "<p>indulgent " + rt_indulgent + "ms.</p>" +
             "<p>Press any key to complete the experiment. Thank you!</p>";
 
