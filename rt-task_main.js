@@ -36,18 +36,12 @@ timeline.push(instructions);
 /* test trials */
 
 var test_stimuli = [{
-        stimulus: '<div style="font-size:60px;">Energetic</div>',
-        data: {
-            test_part: 'energetic',
-            correct_response: 'j'
-        }
+        stimulus: '<div style="font-size:60px;">energetic</div>',
+        data: {test_part: 'energetic', correct_response: 'j'}
     },
     {
-        stimulus: '<div style="font-size:60px;">Indulgent</div>',
-        data: {
-            test_part: 'indulgent',
-            correct_response: 'j'
-        }
+        stimulus: '<div style="font-size:60px;">indulgent</div>',
+        data: {test_part: 'indulgent', correct_response: 'j'}
     }
 ];
 
@@ -68,6 +62,7 @@ var test = {
     stimulus: jsPsych.timelineVariable('stimulus'),
     choices: ['f', 'j'],
     data: jsPsych.timelineVariable('data'),
+    prompt: '<div class = leftBoxes>NO-F</div> <div class = rightBoxes>YES-J</div>',
     on_finish: function (data) {
         data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
     },
@@ -102,4 +97,3 @@ var debrief_block = {
 
     }
 };
-timeline.push(debrief_block);
