@@ -9,7 +9,7 @@ var timeline = [];
 
 /* define instructions trial */
 var instructions = {
-    type: "html-button-response",
+    type: "html-keyboard-response",
     stimulus: "<p>You will now carry out the same task.</p>" +
                 "<p>This time, please respond to whether you associate the word shown with the yoghurt you have just eaten or your experience of eating this yoghurt.</p>" +
                 "<p>There are no incorrect answers, just your opinion.</p>" +
@@ -85,7 +85,7 @@ var test_stimuli = [{
 ];
 
 var fixation = {
-    type: 'html-button-response',
+    type: 'html-keyboard-response',
     stimulus: '<div style="font-size:60px;">+</div>',
     choices: jsPsych.NO_KEYS,
     trial_duration: function () {
