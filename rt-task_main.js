@@ -9,7 +9,7 @@ var timeline = [];
 
 /* define instructions trial */
 var instructions = {
-    type: "html-keyboard-response",
+    type: "html-button-response",
     stimulus: "<p>You will now carry out the same task.</p>" +
                 "<p>This time, please respond to whether you associate the word shown with the yoghurt you have just eaten or your experience of eating this yoghurt.</p>" +
                 "<p>There are no incorrect answers, just your opinion.</p>" +
@@ -117,7 +117,7 @@ timeline.push(test_procedure);
 /* define debrief */
 
 var debrief_block = {
-    type: "html-keyboard-response",
+    type: "html-button-response",
     stimulus: function () {
         var energetic = jsPsych.data.get().filter({test_part: 'energetic'});
         var indulgent = jsPsych.data.get().filter({test_part: 'indulgent'});
