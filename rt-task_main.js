@@ -84,7 +84,7 @@ var test_stimuli = [{
 ];
 
 var fixation = {
-    type: 'html-keyboard-response',
+    type: 'html-button-response',
     stimulus: '<div style="font-size:60px;">+</div>',
     choices: jsPsych.NO_KEYS,
     trial_duration: function () {
@@ -96,7 +96,7 @@ var fixation = {
 }
 
 var test = {
-    type: "html-keyboard-response",
+    type: "html-button-response",
     stimulus: jsPsych.timelineVariable('stimulus'),
     choices: ['f', 'j'],
     data: jsPsych.timelineVariable('data'),
