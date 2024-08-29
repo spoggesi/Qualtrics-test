@@ -116,7 +116,7 @@ timeline.push(test_procedure);
 /* define debrief */
 
 var debrief_block = {
-    type: "html-keyboard-response",
+    type: "html-button-response",
     stimulus: function () {
         var energetic = jsPsych.data.get().filter({test_part: 'energetic'});
         var indulgent = jsPsych.data.get().filter({test_part: 'indulgent'});
