@@ -15,8 +15,7 @@ var instructions = {
                 "<p>There are no incorrect answers, just your opinion.</p>" +
                 "<p>Please place your fingers over the F and J keys ready to make your choices.</p>" +
                 "<p>Press any key to begin.</p>",
-    post_trial_gap: 2000,
-    choice:['Continue']
+    post_trial_gap: 2000
 };
 timeline.push(instructions);
 
