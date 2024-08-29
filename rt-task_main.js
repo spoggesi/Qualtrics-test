@@ -7,28 +7,14 @@ var repo_site = "https://spoggesi.github.io/Qualtrics-test/";
 /* create timeline */
 var timeline = [];
 
-/* define welcome message trial */
-var welcome_block = {
-    type: "html-keyboard-response",
-    stimulus: "Welcome to the experiment. Press any key to begin."
-};
-timeline.push(welcome_block);
-
 /* define instructions trial */
 var instructions = {
     type: "html-keyboard-response",
-    stimulus: "<p>In this experiment, a circle will appear in the center " +
-        "of the screen.</p><p>If the circle is <strong>blue</strong>, " +
-        "press the letter F on the keyboard as fast as you can.</p>" +
-        "<p>If the circle is <strong>orange</strong>, press the letter J " +
-        "as fast as you can.</p>" +
-        "<div style='width: 700px;'>" +
-        "<div style='float: left;'><img src='" + repo_site + "img/blue.png'></img>" + // Change 2: Adding `repo_site` in `instructions`
-        "<p class='small'><strong>Press the F key</strong></p></div>" +
-        "<div class='float: right;'><img src='" + repo_site + "img/orange.png'></img>" + // Change 2: Adding `repo_site` in `instructions`
-        "<p class='small'><strong>Press the J key</strong></p></div>" +
-        "</div>" +
-        "<p>Press any key to begin.</p>",
+    stimulus: "<p>You will now carry out the same task.</p>" +
+                "<p>This time, please respond to whether you associate the word shown with the yoghurt you have just eaten or your experience of eating this yoghurt.</p>" +
+                "<p>There are no incorrect answers, just your opinion.</p>" +
+                "<p>Please place your fingers over the F and J keys ready to make your choices.</p>" +
+                "<p>Press any key to begin.</p>",
     post_trial_gap: 2000
 };
 timeline.push(instructions);
@@ -133,86 +119,36 @@ timeline.push(test_procedure);
 var debrief_block = {
     type: "html-keyboard-response",
     stimulus: function () {
-
-        var energetic = jsPsych.data.get().filter({
-            test_part: 'energetic'
-        });
-        var indulgent = jsPsych.data.get().filter({
-            test_part: 'indulgent'
-        });
-        var nervous = jsPsych.data.get().filter({
-            test_part: 'nervous'
-        });
-        var relaxed = jsPsych.data.get().filter({
-            test_part: 'relaxed'
-        });
-        var active = jsPsych.data.get().filter({
-            test_part: 'active'
-        });
-        var happy = jsPsych.data.get().filter({
-            test_part: 'happy'
-        });
-        var uninspired = jsPsych.data.get().filter({
-            test_part: 'uninspired'
-        });
-        var classic = jsPsych.data.get().filter({
-            test_part: 'classic'
-        });
-        var impressed= jsPsych.data.get().filter({
-            test_part: 'impressed'
-        });
-        var sour = jsPsych.data.get().filter({
-            test_part: 'sour'
-        });
-        var sweet = jsPsych.data.get().filter({
-            test_part: 'sweet'
-        });
-        var thick = jsPsych.data.get().filter({
-            test_part: 'thick'
-        });
-        var creamy = jsPsych.data.get().filter({
-            test_part: 'creamy'
-        });
-var healthy = jsPsych.data.get().filter({
-            test_part: 'healthy'
-        });
-var tasty = jsPsych.data.get().filter({
-            test_part: 'tasty'
-        });
-
-
+        var energetic = jsPsych.data.get().filter({test_part: 'energetic'});
+        var indulgent = jsPsych.data.get().filter({test_part: 'indulgent'});
+        var nervous = jsPsych.data.get().filter({test_part: 'nervous'});
+        var relaxed = jsPsych.data.get().filter({test_part: 'relaxed'});
+        var active = jsPsych.data.get().filter({test_part: 'active'});
+        var happy = jsPsych.data.get().filter({test_part: 'happy'});
+        var uninspired = jsPsych.data.get().filter({test_part: 'uninspired'});
+        var classic = jsPsych.data.get().filter({test_part: 'classic'});
+        var impressed= jsPsych.data.get().filter({test_part: 'impressed'});
+        var sour = jsPsych.data.get().filter({test_part: 'sour'});
+        var sweet = jsPsych.data.get().filter({test_part: 'sweet'});
+        var thick = jsPsych.data.get().filter({test_part: 'thick'});
+        var creamy = jsPsych.data.get().filter({test_part: 'creamy'});
+        var healthy = jsPsych.data.get().filter({test_part: 'healthy'});
+        var tasty = jsPsych.data.get().filter({test_part: 'tasty'});
 
         var rt_energetic = Math.round(energetic.select('rt').mean());
         var rt_indulgent = Math.round(indulgent.select('rt').mean());
         var rt_nervous = Math.round(nervous.select('rt').mean());
-var rt_relaxed = Math.round(relaxed.select('rt').mean());
-var rt_active = Math.round(active.select('rt').mean());
-var rt_happy = Math.round(happy.select('rt').mean());
-var rt_uninspired = Math.round(uninspired.select('rt').mean());
-var rt_classic = Math.round(classic.select('rt').mean());
-var rt_impressed = Math.round(impressed.select('rt').mean());
-var rt_sour= Math.round(indulgent.select('rt').mean());
-var rt_sweet= Math.round(sweet.select('rt').mean());
-var rt_thick= Math.round(thick.select('rt').mean());
-var rt_creamy= Math.round(creamy.select('rt').mean());
-var rt_healthy= Math.round(healthy.select('rt').mean());
-var rt_tasty= Math.round(tasty.select('rt').mean());
-
-
-
-
-
-
-
-
-
-
-
-
-
-return "<p>energetic " + rt_energetic + "ms.</p>" +
-            "<p>indulgent " + rt_indulgent + "ms.</p>" +
-            "<p>Press any key to complete the experiment. Thank you!</p>";
-
+        var rt_relaxed = Math.round(relaxed.select('rt').mean());
+        var rt_active = Math.round(active.select('rt').mean());
+        var rt_happy = Math.round(happy.select('rt').mean());
+        var rt_uninspired = Math.round(uninspired.select('rt').mean());
+        var rt_classic = Math.round(classic.select('rt').mean());
+        var rt_impressed = Math.round(impressed.select('rt').mean());
+        var rt_sour= Math.round(indulgent.select('rt').mean());
+        var rt_sweet= Math.round(sweet.select('rt').mean());
+        var rt_thick= Math.round(thick.select('rt').mean());
+        var rt_creamy= Math.round(creamy.select('rt').mean());
+        var rt_healthy= Math.round(healthy.select('rt').mean());
+        var rt_tasty= Math.round(tasty.select('rt').mean());
     }
 };
