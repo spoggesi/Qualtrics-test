@@ -85,12 +85,10 @@ var test_stimuli = [{
 ];
 
 var fixation = {
-    type: 'html-keyboard-response',
+    type: 'html-button-response',
     stimulus: '<div style="font-size:60px;">+</div>',
     choices: jsPsych.NO_KEYS,
-    trial_duration: function () {
-        return jsPsych.randomization.sampleWithoutReplacement([1000], 1)[0];
-    },
+    trial_duration: 1000,
     data: {
         test_part: 'fixation'
     }
