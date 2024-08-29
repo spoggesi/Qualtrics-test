@@ -97,7 +97,7 @@ var fixation = {
 var test = {
     type: "html-button-response",
     stimulus: jsPsych.timelineVariable('stimulus'),
-    choices: ['f', 'j'],
+    choices: ['<button class=leftBoxes>NO</button>', '<button class=leftBoxes>NO</button>'],
     data: jsPsych.timelineVariable('data'),
     prompt: '<div class = leftBoxes>NO-F</div> <div class = rightBoxes>YES-J</div>',
     on_finish: function (data) {
