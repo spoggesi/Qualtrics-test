@@ -9,14 +9,13 @@ var timeline = [];
 
 /* define instructions trial */
 var instructions = {
-    type: "html-button-response",
+    type: "html-keyboard-response",
     stimulus: "<p>You will now carry out the same task.</p>" +
                 "<p>This time, please respond to whether you associate the word shown with the yoghurt you have just eaten or your experience of eating this yoghurt.</p>" +
                 "<p>There are no incorrect answers, just your opinion.</p>" +
                 "<p>Please place your fingers over the F and J keys ready to make your choices.</p>" +
                 "<p>Press any key to begin.</p>",
-    post_trial_gap: 2000,
-    choices: ['Continue'],
+    post_trial_gap: 2000
 };
 timeline.push(instructions);
 
@@ -85,19 +84,21 @@ var test_stimuli = [{
 ];
 
 var fixation = {
-    type: 'html-button-response',
+    type: 'html-keyboard-response',
     stimulus: '<div style="font-size:60px;">+</div>',
     choices: jsPsych.NO_KEYS,
-    trial_duration: 1000,
+    trial_duration: function () {
+        return jsPsych.randomization.sampleWithoutReplacement([1000], 1)[0];
+    },
     data: {
         test_part: 'fixation'
     }
 }
 
 var test = {
-    type: "html-button-response",
+    type: "html-keyboard-response",
     stimulus: jsPsych.timelineVariable('stimulus'),
-    choices: ['<button class=leftBoxes>NO</button>', '<button class=leftBoxes>NO</button>'],
+    choices: ['f', 'j'],
     data: jsPsych.timelineVariable('data'),
     prompt: '<div class = leftBoxes>NO-F</div> <div class = rightBoxes>YES-J</div>',
     on_finish: function (data) {
@@ -116,7 +117,7 @@ timeline.push(test_procedure);
 /* define debrief */
 
 var debrief_block = {
-    type: "html-button-response",
+    type: "html-keyboard-response",
     stimulus: function () {
         var energetic = jsPsych.data.get().filter({test_part: 'energetic'});
         var indulgent = jsPsych.data.get().filter({test_part: 'indulgent'});
