@@ -22,63 +22,63 @@ timeline.push(instructions);
 
 var test_stimuli = [{
         stimulus: '<div style="font-size:60px;">energetic</div>',
-        data: {test_part: 'energetic_Kap', correct_response: 'j'}
+        data: {test_part: 'energeticKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">indulgent</div>',
-        data: {test_part: 'indulgent_Kap', correct_response: 'j'}
+        data: {test_part: 'indulgentKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">nervous</div>',
-        data: {test_part: 'nervous_Kap', correct_response: 'j'}
+        data: {test_part: 'nervousKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">relaxed</div>',
-        data: {test_part: 'relaxed_Kap', correct_response: 'j'}
+        data: {test_part: 'relaxedKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">active</div>',
-        data: {test_part: 'active_Kap', correct_response: 'j'}
+        data: {test_part: 'activeKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">happy</div>',
-        data: {test_part: 'happy_Kap', correct_response: 'j'}
+        data: {test_part: 'happyKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">uninspired</div>',
-        data: {test_part: 'uninspired_Kap', correct_response: 'j'}
+        data: {test_part: 'uninspiredKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">classic</div>',
-        data: {test_part: 'classic_Kap', correct_response: 'j'}
+        data: {test_part: 'classicKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">impressed</div>',
-        data: {test_part: 'impressed_Kap', correct_response: 'j'}
+        data: {test_part: 'impressedKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">sour</div>',
-        data: {test_part: 'sour_Kap', correct_response: 'j'}
+        data: {test_part: 'sourKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">sweet</div>',
-        data: {test_part: 'sweet_Kap', correct_response: 'j'}
+        data: {test_part: 'sweetKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">thick</div>',
-        data: {test_part: 'thick_Kap', correct_response: 'j'}
+        data: {test_part: 'thickKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">creamy</div>',
-        data: {test_part: 'creamy_Kap', correct_response: 'j'}
+        data: {test_part: 'creamyKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">healthy</div>',
-        data: {test_part: 'healthy_Kap', correct_response: 'j'}
+        data: {test_part: 'healthyKap', correct_response: 'j'}
     },
     {
         stimulus: '<div style="font-size:60px;">tasty</div>',
-        data: {test_part: 'tasty_Kap', correct_response: 'j'}
+        data: {test_part: 'tastyKap', correct_response: 'j'}
     }
 ];
 
