@@ -9,9 +9,8 @@ var timeline = [];
 /* define instructions trial */
 var instructions = {
     type: "html-keyboard-response",
-    stimulus: "<p>Please eat the rest of the sample. You can now finish all the yoghurt left in the 100g pot.</p>" +
-                "<p>You will now carry out the same task as the practice task.</p>" +
-                "<p>This time, please respond to whether you associate the word shown with the yoghurt you have just eaten or your experience of eating this yoghurt.</p>" +
+    stimulus: "<p>Please eat the rest of the sample. You can now finish all the yoghurt left in the pot.</p>" +
+                "<p>Please respond to whether you associate the word shown with the yoghurt you have just eaten or your experience of eating this yoghurt.</p>" +
                 "<p>There are no incorrect answers, just your opinion.</p>" +
                 "<p>Please place your fingers over the F and J keys ready to make your choices.</p>" +
                 "<p>Press any key to begin.</p>",
