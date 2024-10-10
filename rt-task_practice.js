@@ -10,7 +10,7 @@ var timeline = [];
 /* define instructions trial */
 var instructions = {
     type: "html-keyboard-response",
-    stimulus: "<font size="3"><p>You will now carry out the <strong>PRACTICE</strong> for the fast response task. Please answer as <strong>QUICKLY</strong> as you can.</font></p>" +
+    stimulus: "<p><div style="font-size:30px;">You will now carry out the <strong>PRACTICE</strong> for the fast response task. Please answer as <strong>QUICKLY</strong> as you can.</div></p>" +
                 "<p>You will see words appear quickly on-screen. Respond <strong>YES</strong> by using the <strong>J</strong> key or <strong>NO</strong> using the <strong>F</strong> key to whether these words can be associated with <strong>WEATHER TERMS</strong>.</p>" +
                 "<p>Please place your fingers over the F and J keys ready to make your choices.</p>" +
                 "<p>Press any key to begin.</p>",
